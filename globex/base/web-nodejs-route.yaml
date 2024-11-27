@@ -1,0 +1,20 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    openshift.io/host.generated: "true"
+  labels:
+    app: web-nodejs
+    app.kubernetes.io/component: web-nodejs
+    app.kubernetes.io/instance: web-nodejs
+    app.kubernetes.io/name: web-nodejs
+    app.kubernetes.io/part-of: web-nodejs
+  name: web-nodejs
+spec:
+  port:
+    targetPort: 8080
+  to:
+    kind: Service
+    name: web-nodejs
+    weight: 100
+  wildcardPolicy: None

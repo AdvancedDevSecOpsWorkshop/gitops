@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: web-nodejs
+    app.kubernetes.io/component: web-nodejs
+    app.kubernetes.io/instance: web-nodejs
+    app.kubernetes.io/name: web-nodejs
+    app.kubernetes.io/part-of: web-nodejs
+  name: web-nodejs
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: web-nodejs
+  sessionAffinity: None
+  type: ClusterIP
