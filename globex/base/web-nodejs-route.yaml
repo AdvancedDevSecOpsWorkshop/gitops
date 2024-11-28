@@ -17,4 +17,7 @@ spec:
     kind: Service
     name: web-nodejs
     weight: 100
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
   wildcardPolicy: None

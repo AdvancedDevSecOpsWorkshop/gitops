@@ -25,6 +25,9 @@ spec:
           ports:
             - containerPort: 8080
               protocol: TCP
+          env:
+            - name: SECURE_COOLSTORE_GW_ENDPOINT
+              value: 'https://gateway-vertx-coolstore-dev-user1.apps.cluster-424xp.424xp.sandbox1774.opentlc.com'
           resources: {}
           terminationMessagePath: /dev/termination-log
           terminationMessagePolicy: File
