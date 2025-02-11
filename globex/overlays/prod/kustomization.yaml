@@ -2,6 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
 - ../../base
+
 patches:
 - target:
     kind: Deployment
@@ -9,4 +10,4 @@ patches:
   patch: |-
     - op: replace
       path: /spec/template/spec/containers/0/image
-      value:            "registry-quay-quay-operator.apps.cluster-424xp.424xp.sandbox1774.opentlc.com/workshop49/globex-ui:main-b183894cabd3eebaa5844143d5ac60dc9863fb57"
+      value: "registry-quay-quay-operator.apps.cluster-424xp.424xp.sandbox1774.opentlc.com/workshop49/globex-ui:main-b183894cabd3eebaa5844143d5ac60dc9863fb57"
